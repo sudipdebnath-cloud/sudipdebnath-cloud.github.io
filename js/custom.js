@@ -4,4 +4,13 @@ document.addEventListener("includes-loaded", () => {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
+
 });
+
+function showAllSkills() {
+    document.getElementById("allSkillsPopup").classList.add("active");
+}
+
+function closeSkillsPopup() {
+    document.getElementById("allSkillsPopup").classList.remove("active");
+}

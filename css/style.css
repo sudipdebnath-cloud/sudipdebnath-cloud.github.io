@@ -40,17 +40,20 @@ header {
     line-height: 1;
 }
 
-.fs, .fd {
+.fs,
+.fd {
     font-family: 'Pacifico', cursive;
     font-size: 12px;
 }
 
-.logo-text .s, .fs {
+.logo-text .s,
+.fs {
     color: #0197d6;
     /* Blue S */
 }
 
-.logo-text .d, .fd {
+.logo-text .d,
+.fd {
     color: #5fc039;
     /* Green D */
 }
@@ -209,9 +212,14 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.skill-badges .badge:hover {
-    background-color: #0197d6;
-    color: #fff;
+.more-skills-badge {
+    cursor: pointer;
+}
+
+.skill-badges .badge:hover,
+.more-skills-badge {
+    background-color: #0197d6 !important;
+    color: #fff !important;
 }
 
 
@@ -302,4 +310,44 @@ footer {
     margin-top: 50px;
     font-size: 0.9em;
     color: #333;
+}
+
+.skills-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content .badge {
+    margin: 5px;
+    display: inline-block;
 }
