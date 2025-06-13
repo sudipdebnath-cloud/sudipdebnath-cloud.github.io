@@ -148,25 +148,32 @@ header {
     .header-container {
         padding: 10px 20px I !important;
     }
+
     .logo-text {
         font-size: 44px !important;
     }
+
     .main-nav li:not(:last-child) {
         margin-right: 16px !important;
     }
+
     .main-nav a {
         font-size: 16px !important;
     }
+
     .hero-text h1 {
         font-size: 20px !important;
     }
+
     .hero-image img {
         width: 300px !important;
         height: 300px !important;
     }
+
     .hero-text p {
         font-size: 16px !important;
     }
+
     .hero-text .btn {
         padding: 10px 25px !important;
     }
@@ -177,6 +184,32 @@ header {
     margin-bottom: 30px;
 }
 
+
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.skill-badges .badge {
+    display: inline-block;
+    background-color: #e0f2ff;
+    color: #0b0e28;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.skill-badges .badge:hover {
+    background-color: #0197d6;
+    color: #fff;
+}
+
+
 .hero-text .btn {
     display: inline-block;
     background-color: #0197d6;
@@ -186,6 +219,7 @@ header {
     border-radius: 5px;
     font-weight: 700;
     transition: background-color 0.3s ease;
+    margin-top: 30px;
 }
 
 .hero-text .btn:hover {
