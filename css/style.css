@@ -40,12 +40,17 @@ header {
     line-height: 1;
 }
 
-.logo-text .s {
+.fs, .fd {
+    font-family: 'Pacifico', cursive;
+    font-size: 12px;
+}
+
+.logo-text .s, .fs {
     color: #0197d6;
     /* Blue S */
 }
 
-.logo-text .d {
+.logo-text .d, .fd {
     color: #5fc039;
     /* Green D */
 }
