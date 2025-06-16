@@ -12,6 +12,9 @@
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -23,11 +26,12 @@
   <main>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" data-aos="fade-in" data-aos-delay="300">
       <div class="container hero-container">
         <div class="hero-text">
           <h1>Hi, I'm Sudip Debnath</h1>
-          <p>A passionate full-stack developer crafting beautiful and functional web experiences.</p>
+          <p>A Full-Stack Developer crafting high-performance web applications with clean code, scalable architecture,
+            and a focus on user experience.</p>
           <div class="skill-badges">
             <span class="badge">PHP</span>
             <span class="badge">Laravel</span>
@@ -57,7 +61,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up" data-aos-delay="200">
       <div class="container">
         <h2>My Projects</h2>
         <div class="project-list">
@@ -111,6 +115,10 @@
 
   <!-- JavaScript Files -->
   <script src="./js/htmlinclude.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
   <script src="./js/custom.js"></script>
 
 </body>

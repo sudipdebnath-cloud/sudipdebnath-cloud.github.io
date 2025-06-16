@@ -5,7 +5,14 @@ document.addEventListener("includes-loaded", () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
+    // Re-initialize AOS after includes are loaded
+    if (typeof AOS !== 'undefined') {
+        AOS.init();
+    }
+
 });
+
+AOS.init();
 
 function showAllSkills() {
     document.getElementById("allSkillsPopup").classList.add("active");
