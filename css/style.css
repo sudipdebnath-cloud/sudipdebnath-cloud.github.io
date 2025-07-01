@@ -316,42 +316,152 @@ footer {
     color: #333;
 }
 
+
+/* Popup Overlay */
 .skills-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px; /* Added spacing around popup */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .skills-popup.active {
-    display: flex;
+  display: flex;
 }
 
+/* Popup Content Box */
 .popup-content {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-    position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 0px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE & Edge */
+
+  /* Gradient Border */
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #5fc039, #0197d6);
+  border-image-slice: 1;
+
+  /* Animation */
+  animation: popupFadeIn 0.3s ease-in-out;
 }
 
+.popup-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Popup Heading */
+.popup-content h3 {
+  font-size: 35px;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Close Button */
 .close-popup {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
+    top: -2px;
+    right: -2px;
+    background-color: #fff;
+    border: 2px solid #f44336;
+    color: #f44336;
+    font-size: 20px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    line-height: 32px;
+    text-align: center;
     cursor: pointer;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
+.close-popup:hover {
+  background-color: #f44336;
+  color: #fff;
+  border-color: #f44336;
+}
+
+/* Skill Badges Grid */
+.popup-content .skill-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Individual Badge Style */
 .popup-content .badge {
-    margin: 5px;
-    display: inline-block;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  align-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  white-space: normal;           /* Allow line breaks */
+  word-break: break-word;        /* Break long words */
+  min-width: 0;                  /* Let grid control the width */
+}
+
+.popup-content .badge:hover {
+  background-color: #0197d6;
+  color: #fff;
+}
+
+/* Popup Animation */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .popup-content .badge {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    margin: 20px;
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+
+  .close-popup {
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
