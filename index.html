@@ -66,20 +66,30 @@
       <div class="container">
         <h2>My Projects</h2>
         <div class="project-list">
-          <div class="project-item">
-            <i class="fas fa-code"></i>
-            <h3>Custom Portfolio</h3>
-            <p>Personal portfolio built with HTML, CSS, and JavaScript.</p>
+          <div class="project-item" data-target="wordpressModal">
+            <i class="fab fa-wordpress"></i>
+            <h3>WordPress</h3>
+            <p>Custom themes, plugin development, and Elementor-based websites.</p>
           </div>
-          <div class="project-item">
+          <div class="project-item" data-target="woocommerceModal">
             <i class="fas fa-shopping-cart"></i>
-            <h3>eCommerce Site</h3>
-            <p>WooCommerce-based product site with custom checkout features.</p>
+            <h3>WooCommerce</h3>
+            <p>Advanced WooCommerce stores with custom checkout flows.</p>
           </div>
-          <div class="project-item">
-            <i class="fas fa-chart-line"></i>
-            <h3>Marketing Dashboard</h3>
-            <p>Interactive dashboard with real-time analytics using Vue and Laravel.</p>
+          <div class="project-item" data-target="phpModal">
+            <i class="fas fa-code"></i>
+            <h3>PHP</h3>
+            <p>Core PHP applications and backend APIs.</p>
+          </div>
+          <div class="project-item" data-target="shopifyModal">
+            <i class="fab fa-shopify"></i>
+            <h3>Shopify</h3>
+            <p>Custom Shopify store setups and theme modifications.</p>
+          </div>
+          <div class="project-item" data-target="laravelModal">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Laravel</h3>
+            <p>Advanced web apps using Laravel, MySQL, and Vue.js.</p>
           </div>
         </div>
       </div>
@@ -180,6 +190,78 @@
     </div>
   </div>
 
+  <!-- Individual Modals -->
+  <div id="wordpressModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">WordPress Projects</h3>
+      <ul>
+        <li>Elementor-based website builds</li>
+        <li>Custom plugin development</li>
+        <li>Speed-optimized blog setups</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="woocommerceModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">WooCommerce Projects</h3>
+      <ul>
+        <li>Custom checkout flow</li>
+        <li>Gravity Forms & Woo Add-ons</li>
+        <li>Shipping & tax integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="phpModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">PHP Projects</h3>
+      <ul>
+        <li>Custom PHP backend solutions</li>
+        <li>Payment gateway integration</li>
+        <li>Invoicing system development</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="shopifyModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">Shopify Projects</h3>
+      <ul class="project-links">
+        <li>
+          <strong>Little Lou Baby:</strong>
+          <a href="https://littleloubaby.com.au/" target="_blank" rel="noopener noreferrer">
+            Custom Shopify store with theme tweaks & app integrations
+          </a>
+        </li>
+        <!-- Add more like this -->
+        <!--
+        <li>
+          <strong>Project Name:</strong>
+          <a href="https://your-url.com" target="_blank" rel="noopener noreferrer">
+            Short description of the project
+          </a>
+        </li>
+        -->
+      </ul>
+    </div>
+  </div>
+
+  <div id="laravelModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3>Laravel Projects</h3>
+      <ul>
+        <li>CRM dashboard with Vue.js</li>
+        <li>JWT-based APIs</li>
+        <li>Admin panels with Livewire</li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Include Footer -->
   <include src="./inc/footer.html"></include>

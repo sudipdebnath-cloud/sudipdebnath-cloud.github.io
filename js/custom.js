@@ -1,5 +1,7 @@
+AOS.init(); // This stays here if you're triggering AOS before includes load
+
 document.addEventListener("includes-loaded", () => {
-    // Now safe to access included content
+    // Safe to access included content now
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
@@ -10,39 +12,35 @@ document.addEventListener("includes-loaded", () => {
         AOS.init();
     }
 
+    // ========== Modal Open Logic ==========
+    document.querySelectorAll('.project-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const targetId = item.getAttribute('data-target');
+            const modal = document.getElementById(targetId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    // ========== Modal Close Logic ==========
+    document.querySelectorAll('.project-modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target.classList.contains('project-modal') || e.target.hasAttribute('data-close')) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // ========== Skills Popup Logic ==========
+    const allSkillsPopup = document.getElementById("allSkillsPopup");
+    if (allSkillsPopup) {
+        window.showAllSkills = () => {
+            allSkillsPopup.classList.add("active");
+        };
+
+        window.closeSkillsPopup = () => {
+            allSkillsPopup.classList.remove("active");
+        };
+    }
 });
-
-AOS.init();
-
-function showAllSkills() {
-    document.getElementById("allSkillsPopup").classList.add("active");
-}
-
-function closeSkillsPopup() {
-    document.getElementById("allSkillsPopup").classList.remove("active");
-}
-
-/*const popup = document.querySelector('.popup-content');
-let isDragging = false;
-let offsetX = 0;
-let offsetY = 0;
-
-popup.addEventListener('mousedown', function (e) {
-  isDragging = true;
-  offsetX = e.clientX - popup.offsetLeft;
-  offsetY = e.clientY - popup.offsetTop;
-  popup.style.position = 'absolute';
-  popup.style.margin = 0; // Remove margin for free movement
-  popup.style.zIndex = 10000;
-});
-
-document.addEventListener('mouseup', function () {
-  isDragging = false;
-});
-
-document.addEventListener('mousemove', function (e) {
-  if (isDragging) {
-    popup.style.left = e.clientX - offsetX + 'px';
-    popup.style.top = e.clientY - offsetY + 'px';
-  }
-});*/
