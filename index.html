@@ -121,7 +121,7 @@
             <p>Custom websites, funnels, automations, email templates, forms, CRM, and full GHL platform setup.</p>
           </div>
 
-          <div class="project-item">
+          <div class="project-item" data-target="zapierModal">
             <i class="fas fa-random"></i>
             <h3>Zapier</h3>
             <p>Multi-step Zaps and webhooks connecting apps for automation.</p>
@@ -145,19 +145,19 @@
             <p>Advanced form setups with conditional logic and integrations.</p>
           </div>
 
-          <div class="project-item">
+          <div class="project-item" data-target="awsModal">
             <i class="fab fa-aws"></i>
             <h3>AWS</h3>
             <p>EC2, S3, and other cloud services for scalable deployment.</p>
           </div>
 
-          <div class="project-item">
+          <div class="project-item" data-target="chromeExtensionModal">
             <i class="fab fa-chrome"></i>
             <h3>Chrome Extension</h3>
             <p>Custom Chrome extensions for automation and data scraping.</p>
           </div>
 
-          <div class="project-item">
+          <div class="project-item" data-target="sitegroundModal">
             <i class="fas fa-server"></i>
             <h3>SiteGround</h3>
             <p>Managed WordPress hosting with tools like staging and caching.</p>
@@ -420,13 +420,20 @@
     <div class="modal-content">
       <span class="close" data-close>&times;</span>
       <h3 class="modal-heading">Laravel Projects</h3>
-      <ul>
+      <ul class="project-links">
         <li>
           <strong>Diamonds for Today:</strong>
           <a href="https://diamondsfortoday.com/" target="_blank" rel="noopener noreferrer">
             Built advanced product filtering and dynamic option logic on product pages; also handled backend admin
             features like child product mapping and multi-currency support
           </a>
+        </li>
+        <li>
+          <strong>TutorBird Clone (Custom API Development):</strong>
+          Built complete backend APIs from scratch using Laravel to replicate the TutorBird platform. Developed full
+          logic for user roles, scheduling, invoicing, and communication for a React-based frontend.
+          <br><span style="font-size: 13px; color: #777;">Original Reference: <a href="https://www.tutorbird.com/"
+              target="_blank" rel="noopener noreferrer">tutorbird.com</a></span>
         </li>
       </ul>
     </div>
@@ -525,6 +532,127 @@
           blockers.
         </li>
 
+      </ul>
+    </div>
+  </div>
+
+  <div id="zapierModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">Zapier Automations</h3>
+      <ul class="project-links">
+
+        <li>
+          <strong>WooCommerce → PDF Monkey → Email:</strong>
+          Automatically generated a custom-designed PDF invoice using PDF Monkey on each order, then attached it to the
+          WooCommerce order confirmation email.
+        </li>
+
+        <li>
+          <strong>WordPress → Facebook / LinkedIn / Twitter:</strong>
+          Automated social sharing by publishing new blog posts directly to connected platforms when published in
+          WordPress.
+        </li>
+
+        <li>
+          <strong>Gravity Forms → Google Sheets / Email / CRM:</strong>
+          Sent form submissions to Google Sheets, notified via email, and synced with GoHighLevel/Zoho CRM using
+          conditional logic and filters.
+        </li>
+
+        <li>
+          <strong>GoHighLevel → Google Calendar / Slack:</strong>
+          Created calendar events or posted to Slack when leads booked appointments via GHL.
+        </li>
+
+        <li>
+          <strong>Regex Data Extraction:</strong>
+          Used built-in Zapier formatter with Regex to extract structured data from raw inputs like emails and text
+          fields.
+        </li>
+
+        <li>
+          <strong>Multi-step Zaps with Filters & Paths:</strong>
+          Built complex conditional automations using filters, paths, delays, formatters, and branching logic to control
+          workflow behavior.
+        </li>
+
+        <li>
+          <strong>AI-Powered Blog Creation:</strong>
+          Leveraged OpenAI via Zapier to auto-generate blog content, inserted a related image, and saved everything to
+          Google Docs — a complete automated blog writing workflow.
+        </li>
+
+        <li>
+          <strong>Google Sheets → Gmail / Slack:</strong>
+          Triggered custom emails or Slack messages when new rows were added or values changed in Google Sheets.
+        </li>
+
+        <li>
+          <strong>Facebook Lead Ads → CRM:</strong>
+          Automatically added Facebook ad leads into CRMs like GoHighLevel and Zoho, triggering follow-up automations.
+        </li>
+
+        <li>
+          <strong>Webhook Integrations:</strong>
+          Sent and received dynamic data via Webhooks by Zapier to connect with external apps and custom backends.
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div id="sitegroundModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">SiteGround Hosting Management</h3>
+      <ul class="project-links">
+        <li>Created temporary development sites and managed them through Site Tools.</li>
+        <li>Set up and accessed SSH terminal for server-side operations.</li>
+        <li>Developed new websites from scratch using SiteGround’s environment.</li>
+        <li>Pointed domains and made sites live with proper DNS configuration.</li>
+        <li>Handled cache settings and country-specific IP blocking via security tools.</li>
+        <li>Managed PHPMyAdmin and database operations inside SiteGround.</li>
+        <li>Used SG Migrator plugin to move WordPress sites from other hosts.</li>
+        <li>Created staging sites from live environments and synced back after updates.</li>
+        <li>Configured servers using full Site Tools and Dev Tools features.</li>
+        <li>Moved websites between SiteGround accounts or servers.</li>
+        <li>Managed FTP accounts — created, connected, modified, and deleted securely.</li>
+        <li><strong>Summary:</strong> End-to-end control and configuration of SiteGround hosting platform for clients
+          and internal development.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="awsModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">AWS Server Setup & Hosting</h3>
+      <ul class="project-links">
+        <li>Created EC2 instances with public IP and configured Elastic IPs for persistent access.</li>
+        <li>Connected instances via SSH to configure the environment (Ubuntu).</li>
+        <li>Installed required stacks: PHP, MySQL, phpMyAdmin, Composer, Laravel, Node.js, and NPM.</li>
+        <li>Configured S3 buckets for file storage and access permissions.</li>
+        <li>Restarted, terminated instances, and managed Elastic IPs as needed.</li>
+        <li>Mapped custom domains to EC2 servers to make projects live.</li>
+        <li><strong>Summary:</strong> Full setup and deployment of live Laravel/PHP projects on AWS with advanced server
+          configuration and domain management.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="chromeExtensionModal" class="project-modal">
+    <div class="modal-content">
+      <span class="close" data-close>&times;</span>
+      <h3 class="modal-heading">Chrome Extension Development</h3>
+      <ul class="project-links">
+        <li>Developed a private Chrome extension using HTML, CSS, and pure JavaScript.</li>
+        <li>Integrated OpenAI APIs (including image generation models) to create content templates.</li>
+        <li>Extension included login system linked with a WordPress plugin, ensuring synced access between site users
+          and extension users.</li>
+        <li>The extension provided tools for AI-based content generation directly in-browser.</li>
+        <li><strong>Use Case:</strong> Private productivity tool built for WordPress plugin users to extend features
+          inside the browser.</li>
       </ul>
     </div>
   </div>
