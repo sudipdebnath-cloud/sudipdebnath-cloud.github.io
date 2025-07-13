@@ -53,7 +53,13 @@
             <span class="badge more-skills-badge" onclick="showAllSkills()">View All</span>
           </div>
 
-          <a href="#projects" class="btn">View My Projects</a>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn">View My Projects</a>
+            <a href="https://www.youtube.com/@CodeBattleZone" class="youtube-icon" target="_blank"
+              rel="noopener noreferrer" title="Visit My YouTube Channel">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
         <div class="hero-image">
           <img src="./images/sd_dp_1.png" alt="Sudip Hero Image">
@@ -425,15 +431,33 @@
           <strong>Diamonds for Today:</strong>
           <a href="https://diamondsfortoday.com/" target="_blank" rel="noopener noreferrer">
             Built advanced product filtering and dynamic option logic on product pages; also handled backend admin
-            features like child product mapping and multi-currency support
+            features like child product mapping and multi-currency support.
           </a>
         </li>
         <li>
           <strong>TutorBird Clone (Custom API Development):</strong>
           Built complete backend APIs from scratch using Laravel to replicate the TutorBird platform. Developed full
           logic for user roles, scheduling, invoicing, and communication for a React-based frontend.
-          <br><span style="font-size: 13px; color: #777;">Original Reference: <a href="https://www.tutorbird.com/"
-              target="_blank" rel="noopener noreferrer">tutorbird.com</a></span>
+          <br>
+          <span style="font-size: 13px; color: #777;">
+            Original Reference:
+            <a href="https://www.tutorbird.com/" target="_blank" rel="noopener noreferrer">tutorbird.com</a>
+          </span>
+        </li>
+        <li>
+          <strong>Energy Certificates Data App (Open Data Integration):</strong>
+          Developed a Laravel-based internal web app to manage and analyze energy certificates from the
+          <a href="https://epc.opendatacommunities.org/" target="_blank" rel="noopener noreferrer">
+            Energy Performance of Buildings Data – England and Wales
+          </a>.
+          Implemented secure admin login with profile management and SMTP email integration. The system supports:
+          <ul>
+            <li>Mass import of 4+ million certificates via CSV upload or API sync (handled via Cron & Laravel
+              Supervisor).</li>
+            <li>Each certificate includes thousands of recommendation records, efficiently processed and stored.</li>
+            <li>Custom filters for certificate search and export of filtered results.</li>
+            <li>Designed certificate templates for clean, structured admin viewing.</li>
+          </ul>
         </li>
       </ul>
     </div>
