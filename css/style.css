@@ -228,31 +228,31 @@ header {
 }
 
 .hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
 }
 
 .youtube-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #FF0000;
-  background-color: #fff;
-  transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #FF0000;
+    background-color: #fff;
+    transition: transform 0.2s ease;
 }
 
 .youtube-icon i {
-  font-size: 20px;
-  color: #FF0000;
+    font-size: 20px;
+    color: #FF0000;
 }
 
 .youtube-icon:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .hero-text .btn {
@@ -622,7 +622,7 @@ footer {
     margin-left: 18px;
 }
 
-.project-modal .project-links  ul {
+.project-modal .project-links ul {
     padding-left: 20px;
     margin-top: 15px;
 }
@@ -706,4 +706,71 @@ footer {
 .back-to-top:hover {
     background-color: #5fc039;
     transform: translateY(-4px);
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg, #5fc039, #0197d6);
+    border-radius: 50px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    animation: heartbeat 2s infinite;
+}
+
+/* Animated gradient border */
+.resume-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 3px;
+    background: linear-gradient(270deg, #5fc039, #0197d6, #5fc039);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+    z-index: -1;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Gradient border animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hover effect */
+.resume-button:hover {
+    background: linear-gradient(90deg, #0197d6, #5fc039);
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(1, 151, 214, 0.3);
 }
