@@ -3,13 +3,23 @@
         <div class="logo" id="logo">
             <a href="https://sudipdebnath-cloud.github.io/"><span class="logo-text"><span class="s">S</span><span class="d">D</span></span></a>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
+            <div class="mobile-nav-logo">
+                <a href="https://sudipdebnath-cloud.github.io/"><span class="logo-text"><span class="s">S</span><span class="d">D</span></span></a>
+            </div>
             <ul>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
+                <li><a href="./wp-plugins.html" class="nav-link">WP Plugins</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="mailto:developer.sudip07@gmail.com"><i class="fas fa-envelope"></i></a></li>
                 <li><a href="tel:+917001012701"><i class="fas fa-phone"></i></a></li>
             </ul>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
     </main>
+    <div class="nav-overlay" id="navOverlay"></div>
 </header>
