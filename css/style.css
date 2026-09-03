@@ -1101,6 +1101,7 @@ footer {
   color: #333;
   margin: 0 0 10px;
   transition: color 0.3s ease;
+  line-height: 1.1em;
 }
 
 .wpp-plugin-card:hover .wpp-plugin-card-body h3 {
