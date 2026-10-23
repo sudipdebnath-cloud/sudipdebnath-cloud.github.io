@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -749,6 +749,8 @@ footer {
   color: #333;
   text-decoration: none;
   font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
@@ -1148,4 +1150,3 @@ footer {
     padding: 0 20px;
   }
 }
-
